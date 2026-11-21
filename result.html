@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Нәтиже | ALMATY CHOICE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+
+  <header class="inner-header">
+    <a href="index.html" class="logo">ALMATY<span>✦</span></a>
+    <button id="logout" class="ghost-btn">Шығу</button>
+  </header>
+
+  <main class="result-screen">
+    <section class="result-panel">
+      <div class="success-icon">✓</div>
+      <p class="eyebrow">САУАЛНАМА АЯҚТАЛДЫ</p>
+      <h1>Рақмет! Сенің пікірің маңызды.</h1>
+      <p>Жауаптарың төменде көрсетілген.</p>
+
+      <div id="answersList" class="answers-list"></div>
+      <p id="resultError" class="form-message"></p>
+
+      <div class="result-actions">
+        <a href="survey.html" class="ghost-btn">Қайта өту</a>
+        <button id="download" class="primary-btn">
+          JSON жүктеу ↓
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="result.js"></script>
+</body>
+</html>
