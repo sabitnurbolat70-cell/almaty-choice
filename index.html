@@ -1,63 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Алматы таңдауы</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALMATY CHOICE | Басты бет</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="frame">
+<body class="home-page">
+
+  <div class="home-screen">
     <header class="topbar">
-      <div class="logo">ALMATY●</div>
-      <div class="tag">Қала тағдырын шешетін 7 сұрақ</div>
+      <a class="logo" href="index.html">ALMATY<span>✦</span></a>
+      <span class="top-label">ҚОҒАМДЫҚ САУАЛНАМА · 2026</span>
+      <a class="top-link" href="login.html">Кіру ↗</a>
     </header>
 
-    <!-- Сұрақ экраны -->
-    <section class="stage" id="quiz">
-      <div class="left">
-        <div class="progress"><div class="progress-bar" id="bar"></div></div>
-        <p class="counter" id="counter"></p>
-        <h1 id="question"></h1>
-        <div class="actions">
-          <button class="btn light" id="back">← Артқа</button>
-          <button class="btn dark" id="next" disabled>Келесі →</button>
-        </div>
+    <main class="home-main">
+      <div class="home-copy">
+        <p class="eyebrow">АЛМАТЫ ҚАЛАСЫ · ҚОҒАМДЫҚ ПІКІР</p>
+
+        <h1>
+          Сенің қалаң.<br>
+          <em>Сенің даусың.</em><br>
+          Сенің таңдауың.
+        </h1>
+
+        <p class="lead">
+          Алматының болашағына қатысты 7 маңызды
+          сұраққа жауап бер. Өз пікіріңді білдір.
+        </p>
+
+        <a class="primary-btn" href="login.html">
+          Сауалнаманы бастау <span>↗</span>
+        </a>
+
+        <p class="micro-text">
+          7 сұрақ · Жеке аккаунт · Өз нәтижелерің
+        </p>
       </div>
 
-      <div class="right">
-        <div class="ring"></div>
-        <div class="answers">
-          <div class="options" id="options"></div>
-          <textarea id="custom" class="custom" rows="3"
-            placeholder="Өз ойыңызды жазыңыз..." hidden></textarea>
-        </div>
-      </div>
-    </section>
+      <div class="showcase" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
 
-    <!-- Қорытынды экраны -->
-    <section class="stage" id="result" hidden>
-      <div class="left">
-        <p class="counter">Сауалнама аяқталды</p>
-        <h1>Рахмет! Сіздің дауысыңыз қабылданды</h1>
-        <div class="actions">
-          <button class="btn light" id="restart">Қайта бастау</button>
-          <button class="btn dark" id="download">JSON жүктеу</button>
+        <div class="float-shell">
+          <div class="float-card">
+            <span class="float-label">ALMATY CHOICE</span>
+            <div class="float-number">07</div>
+            <p>Сенің пікірің маңызды</p>
+            <div class="fake-progress">
+              <span></span>
+            </div>
+            <div class="fake-option">01 · Көлік</div>
+            <div class="fake-option">02 · Экология</div>
+            <div class="fake-option">03 · Құрылыс</div>
+          </div>
         </div>
       </div>
-      <div class="right">
-        <div class="ring"></div>
-        <div class="answers">
-          <div id="summary"></div>
-        </div>
-      </div>
-    </section>
+    </main>
+
+    <footer class="home-footer">
+      <span>ALMATY, KAZAKHSTAN</span>
+      <span>Бір қала. Әртүрлі пікір.</span>
+    </footer>
   </div>
 
-  <script src="questions.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
