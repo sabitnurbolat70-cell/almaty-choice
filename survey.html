@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сауалнама | ALMATY CHOICE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+
+  <header class="inner-header">
+    <a href="index.html" class="logo">ALMATY<span>✦</span></a>
+    <span id="userEmail" class="user-email"></span>
+    <button id="logout" class="ghost-btn">Шығу</button>
+  </header>
+
+  <main class="survey-screen">
+    <div class="survey-card">
+      <div class="survey-top">
+        <span class="eyebrow">АЛМАТЫ ТАҢДАУЫ</span>
+        <strong id="counter">01 / 07</strong>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+
+      <p class="eyebrow" id="category">ҚОҒАМДЫҚ САУАЛНАМА</p>
+      <h1 id="questionTitle">Сұрақ жүктелуде...</h1>
+
+      <div id="options" class="survey-options"></div>
+
+      <div id="customArea" hidden>
+        <label for="customAnswer">Өз пікірің</label>
+        <textarea id="customAnswer" rows="4"
+                  maxlength="2000"
+                  placeholder="Өз ойыңды жаз..."></textarea>
+      </div>
+
+      <p id="surveyError" class="form-message"
+         role="status" aria-live="polite"></p>
+
+      <div class="survey-actions">
+        <button id="prevBtn" class="ghost-btn">← Артқа</button>
+        <button id="nextBtn" class="primary-btn" disabled>
+          Келесі →
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="questions.js"></script>
+  <script type="module" src="survey.js"></script>
+</body>
+</html>
