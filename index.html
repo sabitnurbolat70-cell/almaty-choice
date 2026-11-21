@@ -4,38 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Алматы таңдауы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Артқы жарқыраған неон дақтары -->
-  <div class="orb orb-purple"></div>
-  <div class="orb orb-blue"></div>
-  <div class="orb orb-cyan"></div>
+  <div class="frame">
+    <header class="topbar">
+      <div class="logo">ALMATY●</div>
+      <div class="tag">Қала тағдырын шешетін 7 сұрақ</div>
+    </header>
 
-  <!-- Сұрақ карточкасы -->
-  <main class="card" id="quiz">
-    <div class="progress"><div class="progress-bar" id="bar"></div></div>
-    <p class="counter" id="counter"></p>
-    <h1 id="question"></h1>
-    <div class="options" id="options"></div>
-    <textarea id="custom" class="custom" rows="3"
-      placeholder="Өз ойыңызды жазыңыз..." hidden></textarea>
-    <div class="actions">
-      <button class="btn ghost" id="back">← Артқа</button>
-      <button class="btn primary" id="next" disabled>Келесі →</button>
-    </div>
-  </main>
+    <!-- Сұрақ экраны -->
+    <section class="stage" id="quiz">
+      <div class="left">
+        <div class="progress"><div class="progress-bar" id="bar"></div></div>
+        <p class="counter" id="counter"></p>
+        <h1 id="question"></h1>
+        <div class="actions">
+          <button class="btn light" id="back">← Артқа</button>
+          <button class="btn dark" id="next" disabled>Келесі →</button>
+        </div>
+      </div>
 
-  <!-- Қорытынды экраны -->
-  <main class="card" id="result" hidden>
-    <h1>Рахмет! 🎉</h1>
-    <p class="counter">Сіздің таңдауыңыз:</p>
-    <div id="summary"></div>
-    <div class="actions">
-      <button class="btn ghost" id="restart">Қайта бастау</button>
-      <button class="btn primary" id="download">JSON жүктеу</button>
-    </div>
-  </main>
+      <div class="right">
+        <div class="ring"></div>
+        <div class="answers">
+          <div class="options" id="options"></div>
+          <textarea id="custom" class="custom" rows="3"
+            placeholder="Өз ойыңызды жазыңыз..." hidden></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- Қорытынды экраны -->
+    <section class="stage" id="result" hidden>
+      <div class="left">
+        <p class="counter">Сауалнама аяқталды</p>
+        <h1>Рахмет! Сіздің дауысыңыз қабылданды</h1>
+        <div class="actions">
+          <button class="btn light" id="restart">Қайта бастау</button>
+          <button class="btn dark" id="download">JSON жүктеу</button>
+        </div>
+      </div>
+      <div class="right">
+        <div class="ring"></div>
+        <div class="answers">
+          <div id="summary"></div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <script src="questions.js"></script>
   <script src="script.js"></script>
