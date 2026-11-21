@@ -108,7 +108,7 @@ h1 {
 /* ---------- Оң жақ: Алматы фотосы ---------- */
 .right {
   position: relative;
-  background: var(--black) url("almaty.webp") 100% center / cover no-repeat;
+  background: var(--black) url("almaty.jpg") 100% center / cover no-repeat;
 }
 
 /* Жеңіл қара қабат: фото көрінеді, мәтін оқылады */
