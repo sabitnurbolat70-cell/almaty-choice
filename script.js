@@ -1,5 +1,19 @@
 const $ = (id) => document.getElementById(id);
 
+/* ====== Google Sheets-ке жіберу (қаласаңыз, сілтемені қойыңыз) ====== */
+const SHEET_URL = "";   // мысалы: "https://script.google.com/macros/s/.../exec"
+
+function sendAnswers() {
+  if (!SHEET_URL.startsWith("https://script.google.com")) return;
+  fetch(SHEET_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify({ answers: answers.map(finalAnswer) })
+  }).catch(() => {});
+}
+
+/* ====== Сауалнама логикасы ====== */
 const quiz = $("quiz");
 const result = $("result");
 const bar = $("bar");
@@ -81,6 +95,7 @@ function finalAnswer(a) {
 }
 
 function showResult() {
+  sendAnswers();
   bar.style.width = "100%";
   quiz.hidden = true;
   result.hidden = false;
@@ -116,4 +131,5 @@ $("download").addEventListener("click", () => {
   link.click();
 });
 
+/* ====== Іске қосу ====== */
 render();
