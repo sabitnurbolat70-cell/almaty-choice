@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кіру | ALMATY CHOICE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <a href="index.html" class="back-home">← Басты бетке</a>
+
+  <main class="auth-layout">
+    <aside class="auth-promo">
+      <div class="promo-mark">ALMATY ✦ CHOICE</div>
+      <div>
+        <p class="eyebrow">БІР ҚАЛА · ӘРТҮРЛІ ПІКІР</p>
+        <h1>Әр пікірдің<br><em>өз орны бар.</em></h1>
+        <p>Аккаунтыңа кіріп, Алматы туралы сауалнамаға қатыс.</p>
+      </div>
+      <div class="promo-bottom">АЛМАТЫ · 2026</div>
+    </aside>
+
+    <section class="auth-card">
+
+      <!-- АНИМАЦИЯЛАНҒАН МАЙМЫЛ -->
+      <div class="monkey-stage">
+        <svg id="monkey" class="monkey"
+             viewBox="0 0 300 250"
+             aria-hidden="true">
+
+          <!-- Дене және киім -->
+          <ellipse cx="150" cy="234" rx="70" ry="65" fill="#74432e"/>
+          <path d="M100 205 Q150 188 200 205 L212 250 H88Z"
+                fill="#69426e"/>
+          <path d="M140 203 L150 238 L160 203"
+                fill="#dfba68"/>
+
+          <!-- Құлақтар -->
+          <circle cx="76" cy="126" r="29" fill="#875038"/>
+          <circle cx="224" cy="126" r="29" fill="#875038"/>
+          <circle cx="76" cy="126" r="17" fill="#d7a77c"/>
+          <circle cx="224" cy="126" r="17" fill="#d7a77c"/>
+
+          <!-- Бас -->
+          <ellipse cx="150" cy="116" rx="80" ry="88"
+                   fill="#875038"/>
+
+          <!-- Қызыл бас киім -->
+          <path d="M116 48 L120 15 Q150 5 180 15 L184 48Z"
+                fill="#a9353b"/>
+          <ellipse cx="150" cy="48" rx="37" ry="9"
+                   fill="#d64c50"/>
+          <path d="M178 16 Q200 20 196 49"
+                fill="none" stroke="#dfb967"
+                stroke-width="5"/>
+
+          <!-- Бет -->
+          <ellipse cx="150" cy="140" rx="61" ry="62"
+                   fill="#dfb48b"/>
+
+          <!-- Көздер -->
+          <ellipse cx="121" cy="117" rx="20" ry="24" fill="white"/>
+          <ellipse cx="179" cy="117" rx="20" ry="24" fill="white"/>
+
+          <circle class="pupil" cx="123" cy="119" r="8"
+                  fill="#25202a"/>
+          <circle class="pupil" cx="177" cy="119" r="8"
+                  fill="#25202a"/>
+
+          <!-- Мұрын және ауыз -->
+          <ellipse cx="150" cy="151" rx="29" ry="19"
+                   fill="#edc5a0"/>
+          <ellipse cx="150" cy="143" rx="8" ry="6"
+                   fill="#69402e"/>
+          <path d="M132 170 Q150 188 168 170"
+                fill="none" stroke="#68412f"
+                stroke-width="4" stroke-linecap="round"/>
+
+          <!-- Құпиясөз кезінде көзін жабатын қолдар -->
+          <g class="monkey-hands">
+            <path d="M65 244 Q77 180 117 119"
+                  stroke="#875038" stroke-width="25"
+                  stroke-linecap="round" fill="none"/>
+            <path d="M235 244 Q223 180 183 119"
+                  stroke="#875038" stroke-width="25"
+                  stroke-linecap="round" fill="none"/>
+
+            <ellipse cx="117" cy="117" rx="25" ry="22"
+                     fill="#c68d62"/>
+            <ellipse cx="183" cy="117" rx="25" ry="22"
+                     fill="#c68d62"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="auth-tabs">
+        <button type="button" id="loginTab" class="active">Кіру</button>
+        <button type="button" id="registerTab">Тіркелу</button>
+      </div>
+
+      <h2 id="modeTitle">Қайта қош келдің!</h2>
+      <p class="auth-subtitle">
+        Электрондық поштаңды және құпиясөзіңді енгіз.
+      </p>
+
+      <form id="authForm">
+        <label for="email">Электрондық пошта</label>
+        <input id="email" type="email" autocomplete="email"
+               placeholder="example@gmail.com" required>
+
+        <label for="password">Құпиясөз</label>
+        <div class="password-field">
+          <input id="password" type="password"
+                 autocomplete="current-password"
+                 minlength="6"
+                 placeholder="Кемінде 6 таңба" required>
+          <button type="button" id="togglePassword">Көрсету</button>
+        </div>
+
+        <p id="authMessage" class="form-message"
+           role="status" aria-live="polite"></p>
+
+        <button id="submitAuth" type="submit"
+                class="primary-btn auth-submit">
+          Кіру ↗
+        </button>
+      </form>
+
+      <div class="or-divider"><span>немесе</span></div>
+
+      <button id="googleLogin" class="google-btn" type="button">
+        <span class="google-mark">G</span>
+        Google арқылы жалғастыру
+      </button>
+
+      <p class="auth-note">
+        Аккаунт арқылы өз жауаптарыңды сақтай аласың.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>
